@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+	<script type="text/javascript">
+			function oblicz()
+		{
+			var powierzchnia = document.getElementById("metry").value;
+			if (document.getElementById("plytki").checked==true)
+			 {
+			 	document.getElementById("wynik").innerHTML="Koszt malowania: " + powierzchnia*70 + "zł";
+			 }
+			 else if (document.getElementById("plytki2").checked==true) 
+			 {
+			 	document.getElementById("wynik").innerHTML="Koszt malowania: " + powierzchnia*80 + "zł";
+			 }
+			 else
+			 {
+			 	document.getElementById("wynik").innerHTML="Wprowadź dane";
+			 }
+
+		}
+	</script>
+	
+	
+	</head>
+	
+	<body>
+	
+		<div id="container">
+			<h1>Kafelkowanie Łazienki</h1>
+				<p>powierzchnia w m2: <input type="number" id="metry"></p> <br>
+					<input type="radio" id="plytki">Płytki 20x20 cm <br>
+					<input type="radio" id="plytki2">Płytki 25x12 cm</input> <br> <br>
+					<input type="submit" value="PRZELICZ" onclick="oblicz()">
+				<p id="wynik"></p>
+		</div>
+	
+	</body>
+
+</html>
